@@ -1,0 +1,24 @@
+nav {
+  //background-color: #767d83;
+   //rgb(2, 2, 56);
+   background-color: #818486;
+}
+
+.menu {
+  color     : white;
+  margin-top: 20px;
+}
+
+.menu a:hover {
+  font-size: larger;
+}
+
+
+.mat-drawer-container {
+  height: 100vh !important;
+}
+
+
+mat-nav-list a {
+  color: white;
+}

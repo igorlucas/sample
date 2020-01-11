@@ -1,0 +1,15 @@
+<div style="background-color: aqua;">
+    <label for="cep">CEP</label>
+    <input type="text" name="cep" [(ngModel)]="cep">
+    <button (click)="loadResultCep()">Enviar</button>
+</div>
+<hr>
+<div>
+    <label for="uf">UF</label>
+    <input type="text" name="uf" [(ngModel)]="uf"><br>
+    <label for="cidade">CIDADE</label>
+    <input type="text" name="cidade" [(ngModel)]="cidade"><br>
+    <label for="logradouro">LOGRADOURO</label>
+    <input type="text" name="logradouro" [(ngModel)]="logradouro"><br>
+    <button (click)="loadCep()">Enviar</button>
+</div>

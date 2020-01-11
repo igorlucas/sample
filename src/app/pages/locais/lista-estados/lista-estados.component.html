@@ -1,0 +1,41 @@
+<h1 class="text-center">Lista de Estados</h1>
+<hr>
+<div class="container-filtro">
+    <mat-form-field>
+        <mat-label>Região</mat-label>
+        <mat-select #regiao>
+            <mat-option>Todas</mat-option>
+            <mat-option *ngFor="let r of regioes" [value]="r.nome">
+                {{r.nome}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-button class="btn btn-secondary">Filtrar</button>
+</div>
+
+  <mat-paginator [length]="itensPageLength"
+                 [pageSize]="pageSize"
+                 [pageSizeOptions]="pageSizeOptions"
+                 showFirstLastButtons
+                 (page)="loadPageEstados()">
+  </mat-paginator>
+  
+<table class="text-center table table-striped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">UF</th>
+            <th scope="col">Região</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr *ngFor="let e of estados; index as i">
+            <td>{{i+1}}</td>
+            <td>{{e.nome}}</td>
+            <td>{{e.sigla}}</td>
+            <td> {{e.regiao.nome}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,34 @@
+<mat-sidenav-container>
+    <mat-sidenav [ngStyle]="{'background-color': '#818486',
+    'width': '15rem'}" #sidenav [(opened)]="opened" mode="over">
+      <mat-nav-list>
+        <div class="container text-center menu">
+          <p>MENU</p>
+          <hr>
+          <a mat-list-item routerLink="/estados">Estados</a>
+          <a mat-list-item routerLink="/municipios">Municipios</a>
+          <!--<a mat-list-item routerLink="/user">Usuários</a>
+          <a mat-list-item routerLink="/asset">Ativos</a>
+          <a mat-list-item routerLink="/type">Tipos</a>
+          <a mat-list-item routerLink="/category">Categorias</a> -->
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+  
+    <mat-sidenav-content>
+  
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div (click)="sidenav.toggle()">
+          <span class="navbar-toggler-icon"></span>
+        </div>
+      </nav>
+  
+  
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+  
+  
+    </mat-sidenav-content>
+  </mat-sidenav-container>
